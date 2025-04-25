@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClimApp Simulada</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="app__container header__container">
+        <div class="header__logo">
+          <span class="icon-logo"></span> ClimApp
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link nav__link--active">Inicio</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="app__container">
+        <div class="dashboard">
+          <div class="dashboard__main">
+            <div class="weather-card">
+              <div class="weather-card__header">
+                <div>
+                  <h2 id="locationName" class="weather-card__title"></h2>
+                  <div id="weatherDescription" class="weather-card__subtitle"></div>
+                </div>
+                <div class="weather-card__update">
+                  <div id="lastUpdate">Actualizado: --:--</div>
+    <div style="margin-top: 1rem;">
+        <input type="text" id="cityInput" placeholder="Escribe una ciudad..." style="padding: 0.5rem; width: 70%; max-width: 300px;">
+        <button id="searchButton" style="padding: 0.5rem;">Buscar</button>
+    </div>
+                  <button id="refreshButton" class="weather-card__refresh">
+                    🔄 Actualizar
+                  </button>
+                </div>
+              </div>
+              <div class="weather-card__main">
+                <div id="currentTemp" class="weather-card__temp"></div>
+              </div>
+              <div class="weather-card__details">
+                <div class="weather-detail">
+                  🌡️ <div id="feelsLike" class="weather-detail__value"></div>
+                  <div class="weather-detail__label">Sensación</div>
+                </div>
+                <div class="weather-detail">
+                  💧 <div id="humidity" class="weather-detail__value"></div>
+                  <div class="weather-detail__label">Humedad</div>
+                </div>
+                <div class="weather-detail">
+                  🌬️ <div id="windSpeed" class="weather-detail__value"></div>
+                  <div class="weather-detail__label">Viento</div>
+                </div>
+                <div class="weather-detail">
+                  📊 <div id="pressure" class="weather-detail__value"></div>
+                  <div class="weather-detail__label">Presión</div>
+                </div>
+              </div>
+            </div>
+
+            <section class="forecast">
+              <h2 class="forecast__title">Pronóstico de 5 días</h2>
+              <div id="forecastContainer" class="forecast__container"></div>
+            </section>
+
+            <section class="alerts">
+              <h2 class="alerts__title">Alertas meteorológicas</h2>
+              <div id="alertsContainer"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
